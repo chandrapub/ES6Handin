@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar a = 10;\nvar b = 20;\nvar sum = function sum(a, b) {\n  return a + b;\n};\n\nconsole.log(sum(a, b));\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar a = 10;\nvar b = 20;\nvar sum = function sum(a, b) {\n    return a + b;\n};\n\nconsole.log(sum(a, b));\n\nfetch('https://jsonplaceholder.typicode.com/users').then(function (response) {\n    return response.json();\n}).then(function (body) {\n    var lis = body.map(function (data) {\n        var li = document.createElement('li');\n        var text = 'Name: ${data.name}, Email: ${data.email}';\n\n        li.appendChild(testNode);\n        return li;\n    });\n\n    lis.forEach(function (li) {\n        document.getElementById('mycustomerlist').appendChild(li);\n    });\n}).catch(function (err) {\n    return console.log(err);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
