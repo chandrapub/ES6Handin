@@ -77,17 +77,17 @@ console.log(p1.name);
 fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then((body)=>{
-        const lis = body.map(data => {
-            let li = document.createElement('li');
+        const lilist = body.map(data => {
+            let createli = document.createElement('li');
             let text = `Name: ${data.name}, Email: ${data.email}`
             let textNode = document.createTextNode(text);
             
-            li.appendChild(textNode);
-            return li;
+            createli.appendChild(textNode);
+            return createli;
         });
 
-        lis.forEach((li) => {
-            document.getElementById('myid').appendChild(li);
+        lilist.forEach((createli) => {
+            document.getElementById('myid').appendChild(createli);
             
         })
 
