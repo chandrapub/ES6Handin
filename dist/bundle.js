@@ -94,7 +94,19 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar a = 10;\nvar b = 20;\nvar sum = function sum(a, b) {\n    return a + b;\n};\n\nconsole.log(sum(a, b));\n\nfetch('https://jsonplaceholder.typicode.com/users').then(function (response) {\n    return response.json();\n}).then(function (body) {\n    var lis = body.map(function (data) {\n        var li = document.createElement('li');\n        var text = 'Name: ${data.name}, Email: ${data.email}';\n\n        li.appendChild(testNode);\n        return li;\n    });\n\n    lis.forEach(function (li) {\n        document.getElementById('mycustomerlist').appendChild(li);\n    });\n}).catch(function (err) {\n    return console.log(err);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _person = __webpack_require__(/*! ./person */ \"./src/person.js\");\n\nvar _person2 = _interopRequireDefault(_person);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//Let and Const using\n\nvar a = 10;\nif (true) {\n    var _a = 20;\n    console.log(_a);\n}\nconsole.log(a);\n\nfunction demo() {\n    {\n        var x = 10;\n        {\n            var _x = 15;\n            console.log(_x);\n        }\n        x = 20;\n        console.log(x);\n    }\n}\ndocument.getElementById('myid').innerHTML = demo();\n\n//Template String\n\nvar name = 'Chandra';\nvar dept = 'Web development';\nvar email = 'chandrapub@gmail.com';\n\nvar details = 'Name: ' + name + ', Dept: ' + dept + ', and Email: ' + email;\n\n// document.getElementById('myid').innerHTML = details;\nconsole.log(details);\n\n//Using class improt from person file\n\nvar p1 = new _person2.default('Chandra Shekhar Mondal', 'chandrapub@gmail.com');\n\n// document.getElementById('myid').innerHTML = `Name: ${p1.name}, and Email: ${p1.email}`;\n\nconsole.log(p1.name);\n// const a = 10;\n// const b = 20;\n// const sum = (a, b) => a+b;\n\n// console.log(sum(a,b));\n\nfetch('https://jsonplaceholder.typicode.com/users').then(function (response) {\n    return response.json();\n}).then(function (body) {\n    var lis = body.map(function (data) {\n        var li = document.createElement('li');\n        var text = 'Name: ' + data.name + ', Email: ' + data.email;\n        var textNode = document.createTextNode(text);\n\n        li.appendChild(textNode);\n        return li;\n    });\n\n    lis.forEach(function (li) {\n        // document.getElementById('myid').appendChild(li);\n\n    });\n}).catch(function (err) {\n    return console.log(err);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/person.js":
+/*!***********************!*\
+  !*** ./src/person.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Person = function () {\n    function Person(name, email) {\n        _classCallCheck(this, Person);\n\n        this.name = name;\n        this.email = email;\n    }\n\n    _createClass(Person, [{\n        key: \"print\",\n        value: function print() {\n            console.log(\"Name: \" + this.name + \", Email: \" + this.email);\n        }\n    }]);\n\n    return Person;\n}();\n\nexports.default = Person;\n\n//# sourceURL=webpack:///./src/person.js?");
 
 /***/ })
 
