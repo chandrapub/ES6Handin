@@ -6,6 +6,7 @@ console.log(math.add(20,20));
 console.log(math.sub(20,20));
 // document.getElementById('myid').innerHTML= math.add(20,40);
 
+
 //Using Let and Const 
 
 let a = 10;
@@ -41,16 +42,16 @@ for (const value of iterable) {
 
 //Using Arrow function to display name
 
-
 const print = (name) =>{
     console.log('Hello Arrow function', name);
-    
 }
 // document.getElementById('myid').innerHTML = `Hellow Arrow function : ${print('Chandra Shekhar')}`;
+
 
 //Using Arrow function to display number
 const addNumber = (a,b) => a+b;
 console.log(addNumber(20,30));
+
 
 //Using Template String
 
@@ -71,6 +72,7 @@ let p1 = new Person('Chandra Shekhar Mondal', 'chandrapub@gmail.com');
 // document.getElementById('myid').innerHTML = `Name: ${p1.name}, and Email: ${p1.email}`;
 
 console.log(p1.name);
+
 
 //Using Fetch and promises (to fetch the API)  
 
