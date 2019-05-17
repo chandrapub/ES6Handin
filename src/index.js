@@ -68,7 +68,7 @@ console.log(details);
 
 let p1 = new Person('Chandra Shekhar Mondal', 'chandrapub@gmail.com');
 
-document.getElementById('myid').innerHTML = `Name: ${p1.name}, and Email: ${p1.email}`;
+// document.getElementById('myid').innerHTML = `Name: ${p1.name}, and Email: ${p1.email}`;
 
 console.log(p1.name);
 
