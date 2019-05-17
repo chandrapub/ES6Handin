@@ -4,7 +4,7 @@ import * as math from './math';
 
 console.log(math.add(20,20));
 console.log(math.sub(20,20));
-document.getElementById('myid').innerHTML= math.add(20,40);
+// document.getElementById('myid').innerHTML= math.add(20,40);
 
 //Using Let and Const 
 
@@ -26,7 +26,7 @@ function demo(){
     console.log(x);
     }
 }
-document.getElementById('myid').innerHTML= demo();
+// document.getElementById('myid').innerHTML= demo();
 
 
 //Using for of loop
@@ -35,7 +35,7 @@ let allValue = [];
 for (const value of iterable) {
   console.log(value);
   allValue += value;
-  document.getElementById('myid').innerHTML=`${allValue}`;
+//   document.getElementById('myid').innerHTML=`${allValue}`;
 }
 
 
@@ -46,7 +46,7 @@ const print = (name) =>{
     console.log('Hello Arrow function', name);
     
 }
-document.getElementById('myid').innerHTML = `Hellow Arrow function : ${print('Chandra Shekhar')}`;
+// document.getElementById('myid').innerHTML = `Hellow Arrow function : ${print('Chandra Shekhar')}`;
 
 //Using Arrow function to display number
 const addNumber = (a,b) => a+b;
@@ -60,7 +60,7 @@ const email = 'chandrapub@gmail.com';
 
 const details = `Name: ${name}, Dept: ${dept}, and Email: ${email}`;
 
-document.getElementById('myid').innerHTML = details;
+// document.getElementById('myid').innerHTML = details;
 console.log(details);
 
 
